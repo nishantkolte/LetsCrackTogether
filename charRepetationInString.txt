@@ -1,0 +1,30 @@
+// Numbers of character repats in a string using Map and Time Complexity O(n)
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class maplearn {
+	public maplearn () {
+		String str = "aaaammmiiiitttsssii";
+		char[] ch = str.toCharArray();
+		HashMap mp = new HashMap();
+		int count=0;
+		for(char a :ch )
+		{
+			if(mp.containsKey(a))
+			{ 
+				count=1;
+				mp.put(a,(int) mp.get(a)+1);
+				count=0;
+			}
+			else
+			{
+				mp.put(a, 1);
+			}
+		}
+		System.out.println(mp);
+	}
+public static void main(String[] args) {
+	maplearn m = new maplearn();
+}
+}
