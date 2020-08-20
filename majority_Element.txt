@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class majorityElement {
 	
-	public void test2() {
+	public void action() {
 		System.out.println("Time complexity O(n)");
 		int[] A = {3,2,2,3,3,3};  //positive case
 		HashMap mp = new HashMap();
@@ -35,7 +35,7 @@ public class majorityElement {
 	}
 public static void main(String[] args) {
 	majorityElement mn = new majorityElement();
-	mn.test2();
+	mn.action();
 	System.out.println("Time complexity O(n*2)");
 	int[] A = {3,2,2,3,3,3};  //positive case
 //	int[] a = {1,3,1,1,1,4,4,5,5};  //Negative case
