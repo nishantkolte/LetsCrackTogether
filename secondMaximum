@@ -1,0 +1,92 @@
+#problem statement
+# Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score.
+# You are given  scores. Store them in a list and find the score of the runner-up.
+
+# Sample Input 0
+# 5
+# 2 3 6 6 5
+
+# Expected Output 0
+# 5
+
+#sample Input 1
+# 4
+# 57 57 -57 57
+
+#Expected Output 1
+# -57
+
+#sample Input 2
+# 10
+# 5 5 5 5 5 5 5 5 5 6
+#Expected Output 2
+# 5
+
+#sample Input 3
+# 10
+# 6 6 6 6 6 6 6 6 6 5
+
+#Expected Ouput 3
+# 5
+
+#sample Input 4
+# 3
+# -10 0 10
+# Expected output 5
+# 0
+
+#sample Input 5
+# 5
+# -7 -7 -7 -7 -6
+# Expected output 5
+# -7
+
+#sample Input 6
+# 4
+# 1 -1 -2 -1
+# Expected Output
+# -1
+
+# ------------------------------------------------------------------------------
+
+import array as arrs
+
+if __name__ == '__main__':
+
+    arr =arrs.array('i', [40,100,50,50])
+    
+    # when the data is comming from stub 
+    #  i = int(raw_input())
+    #arr = map(int, raw_input().split())
+    
+    tempd=[]
+    flag =0,
+    val =0
+    k=0
+
+
+    for x in arr:
+        for y in arr:
+            if val < x:
+                if x > y:
+                    val = +x
+
+    for i in range(0, len(arr)):
+        for j in range(i + 1, len(arr)):
+            if (arr[i] < arr[j]):
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+    print(arr)
+
+
+    for i in range(0, len(arr)):
+        for j in range(0, len(arr)):
+            if (arr[i] == arr[j]):
+                break
+        if i == j:
+            tempd.append(str(arr[i]))
+
+    arr = tempd
+    print(arr)
+    print(arr[1])
